@@ -14,6 +14,7 @@
 	margin: 0
 	padding: 0
 	font-family: 'Oswald', sans-serif
+	line-height: 1.5
 
 a
 	color: inherit
@@ -24,7 +25,7 @@ i
 	align-items: center
 	display: flex
 	justify-content: space-between
-	height: 5rem
+	top: 1.25rem
 	padding: 0 1rem
 	position: absolute
 	width: 100%
@@ -56,7 +57,7 @@ i
 	display: flex
 	flex-direction: column
 	height: 100%
-	padding: 1.5rem 0
+	padding: 4rem 0
 	position: fixed
 	top: 0
 	right: 0
@@ -67,7 +68,7 @@ i
 	&__closeBtn
 		color: white
 		position: absolute
-		top: 2rem
+		top: 1.5rem
 		right: 1rem
 	&__list
 	&__item
@@ -79,7 +80,8 @@ i
 .banner
 	background-image: url('../assets/workSpace426x640.jpg')
 	background-size: cover
-	padding: 4rem 0 3rem 0
+	background-position: 50% 50%
+	padding: 1rem 0 3rem 0
 	position: relative
 	overflow: hidden 
 	z-index: 1
@@ -97,11 +99,12 @@ i
 		@include borderTop
 		display: flex
 		flex-direction: column
+		margin-top: 3rem
 	&__header
 		color: white
 		font-size: 1.5em
 		max-width: 50%
-		padding: 4rem 1rem
+		padding: 2rem 1rem 4rem 1rem
 	&__buttonContainer
 		display: flex
 		flex-direction: column
@@ -129,6 +132,27 @@ i
 		margin: 2rem auto
 		padding: 1rem 3rem
 
+.two
+	min-height: 100vh
+	display: flex
+	padding: 2rem
+	&__article
+		display: flex
+		flex-direction: column
+	&__articleHeader
+		color: #555
+	&__articleImg
+		background: black
+		border-radius: 50%
+		display: flex
+		height: 150px
+		margin: auto
+		width: 150px
+		img
+			border-radius: 50%
+			margin: auto
+			max-width: 100%
+
 @media only screen and (min-width: 576px)
 	.nav
 		padding: 0 3rem
@@ -143,6 +167,8 @@ i
 	.banner
 		background-image: url('../assets/workSpace2400x1600.jpg')
 		background-size: cover	
+		background-position: 0 -50
+		background-attachment: fixed
 		&__buttonContainer
 			flex-direction: row
 			flex-wrap: wrap
@@ -152,13 +178,22 @@ i
 			color: white
 			max-width: 50%
 			margin: 0 auto
+			padding: 4rem 1rem 4rem 1rem
+
+	.two
+		&__article
+			width: 50%
 			
 
 @media only screen and (min-width:920px) 
+	.nav
+		top: 2.50rem
+
 	.dropDown
 		display: none
 
 	.banner
+		padding: 4rem 0 3rem 0
 		&__button
 			@include borderRight
 			border-bottom: none
