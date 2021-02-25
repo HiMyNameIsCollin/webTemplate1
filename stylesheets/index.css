@@ -102,7 +102,7 @@ i {
   background-image: url("../assets/workSpace426x640.jpg");
   background-size: cover;
   background-position: 50% 50%;
-  padding: 1rem 0 3rem 0;
+  padding: 1rem 0 1rem 0;
   position: relative;
   overflow: hidden;
   z-index: 1;
@@ -128,7 +128,7 @@ i {
   color: white;
   font-size: 1.5em;
   max-width: 50%;
-  padding: 2rem 1rem 4rem 1rem;
+  padding: 2rem 1rem 1rem 1rem;
 }
 .banner__buttonContainer {
   display: flex;
@@ -141,7 +141,7 @@ i {
   color: white;
   cursor: pointer;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   padding: 0 6rem;
   width: 100%;
 }
@@ -160,13 +160,14 @@ i {
   color: #555;
   cursor: pointer;
   letter-spacing: 2px;
-  margin: 2rem auto;
+  margin: 1rem auto;
   padding: 1rem 3rem;
   transition: 0.25 all forwards;
 }
 @media only screen and (min-width: 920px) {
   .banner__beginBtn {
     transition: 0.25s all linear;
+    margin: 2rem auto;
   }
   .banner__beginBtn:hover {
     background: #555;
@@ -209,13 +210,14 @@ i {
   color: #555;
   cursor: pointer;
   letter-spacing: 2px;
-  margin: 2rem auto;
+  margin: 1rem auto;
   padding: 1rem 3rem;
   transition: 0.25 all forwards;
 }
 @media only screen and (min-width: 920px) {
   .two__articleBtn {
     transition: 0.25s all linear;
+    margin: 2rem auto;
   }
   .two__articleBtn:hover {
     background: #555;
@@ -260,13 +262,14 @@ i {
   color: #555;
   cursor: pointer;
   letter-spacing: 2px;
-  margin: 2rem auto;
+  margin: 1rem auto;
   padding: 1rem 3rem;
   transition: 0.25 all forwards;
 }
 @media only screen and (min-width: 920px) {
   .footer__formBtn {
     transition: 0.25s all linear;
+    margin: 2rem auto;
   }
   .footer__formBtn:hover {
     background: #555;
@@ -294,6 +297,7 @@ i {
     background-size: cover;
     background-position: 0 -50;
     background-attachment: fixed;
+    padding: 1rem 0 3rem 0;
   }
   .banner__buttonContainer {
     flex-direction: row;
