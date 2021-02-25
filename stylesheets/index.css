@@ -40,14 +40,14 @@ a {
   padding-left: 0;
   padding-right: 0.25rem;
 }
-.nav__logo--altColor {
+.nav__logo--alt {
   color: black;
 }
-.nav__logo--altColor span {
+.nav__logo--alt span {
   border-bottom: solid black 2px;
   border-left: solid black 2px;
 }
-.nav__logo--altColor span:nth-of-type(2) {
+.nav__logo--alt span:nth-of-type(2) {
   border-left: none;
   border-bottom: none;
   border-top: solid black 2px;
@@ -62,9 +62,10 @@ a {
 .nav__dropBtn {
   display: block;
 }
-.nav--altBackground {
+.nav--alt {
   background: #e5989b;
   color: black;
+  position: fixed;
 }
 
 .dropDown {
@@ -172,12 +173,12 @@ a {
   }
 }
 
-.two {
+.midSection {
   display: flex;
   flex-direction: column;
   padding: 6rem 2rem;
 }
-.two__article {
+.midSection__article {
   align-items: center;
   color: #555;
   display: flex;
@@ -186,22 +187,22 @@ a {
   padding-top: 1rem;
   text-align: center;
 }
-.two__articleHeader {
+.midSection__articleHeader {
   margin: 0.5rem 0;
 }
-.two__articleImg {
+.midSection__articleImg {
   background: black;
   border-radius: 50%;
   display: flex;
   height: 150px;
   width: 150px;
 }
-.two__articleImg img {
+.midSection__articleImg img {
   border-radius: 50%;
   margin: auto;
   max-width: 100%;
 }
-.two__articleBtn {
+.midSection__articleBtn {
   border: solid rgba(255, 255, 255, 0.25) 0.2rem;
   background: none;
   border-radius: 10px;
@@ -214,11 +215,11 @@ a {
   transition: 0.25 all forwards;
 }
 @media only screen and (min-width: 920px) {
-  .two__articleBtn {
+  .midSection__articleBtn {
     transition: 0.25s all linear;
     margin: 2rem auto;
   }
-  .two__articleBtn:hover {
+  .midSection__articleBtn:hover {
     background: #555;
     color: white;
   }
@@ -317,10 +318,10 @@ a {
     padding: 4rem 1rem 4rem 1rem;
   }
 
-  .two {
+  .midSection {
     flex-direction: row;
   }
-  .two__article {
+  .midSection__article {
     width: 50%;
   }
 
