@@ -12,10 +12,6 @@ a {
   text-decoration: none;
 }
 
-i {
-  pointer-events: none;
-}
-
 .nav {
   align-items: center;
   display: flex;
@@ -89,8 +85,8 @@ i {
 }
 .dropDown__closeBtn {
   position: absolute;
-  top: 1.25rem;
-  right: 1.25rem;
+  top: 1.5rem;
+  right: 1rem;
 }
 .dropDown__item {
   border-bottom: solid rgba(255, 255, 255, 0.25) 0.2rem;
@@ -186,10 +182,12 @@ i {
   color: #555;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
   justify-content: center;
   padding-top: 1rem;
   text-align: center;
+}
+.two__articleHeader {
+  margin: 0.5rem 0;
 }
 .two__articleImg {
   background: black;
@@ -283,7 +281,12 @@ i {
   }
   .nav__list {
     display: flex;
-    gap: 1rem;
+  }
+  .nav__item {
+    margin-right: 1rem;
+  }
+  .nav__item:nth-of-type(3) {
+    margin-right: 0;
   }
   .nav__dropBtn {
     display: none;
