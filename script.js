@@ -9,7 +9,7 @@ document.getElementById('nav__dropBtn').addEventListener('click', (e) => {
 		if(!document.getElementById('dropDown').contains(e.target) || e.target.matches('.dropDown__closeBtn')){
 			gsap.fromTo('#dropDown', {x: '0%'}, {x: '100%', duration: 0.25})
 			setTimeout(() => document.getElementById('dropDown').classList.remove('dropDown--active'), 500);
-			return () => window.removeEventListener('click', closeDropDown)
+			
 		}
 	}
 	window.addEventListener('click', closeDropDown)
