@@ -11,6 +11,7 @@ document.getElementById('nav__dropBtn').addEventListener('click', (e) => {
 		setTimeout(() => dropDown.classList.remove('dropDown--active'), 500);
 		window.removeEventListener('click', closeDropDown)
 		window.removeEventListener('click', clickedOutside)
+		window.removeEventListener('touchend', clickedOutside)
 	}
 
 	const clickedOutside = (e) => {
@@ -22,5 +23,6 @@ document.getElementById('nav__dropBtn').addEventListener('click', (e) => {
 	}
 	document.getElementById('dropDown__closeBtn').addEventListener('click', closeDropDown)	
 	window.addEventListener('click', clickedOutside)
+	window.addEventListener('touchend', clickedOutside)
 
 })
