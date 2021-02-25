@@ -15,7 +15,9 @@ document.getElementById('nav__dropBtn').addEventListener('click', (e) => {
 
 	const clickedOutside = (e) => {
 		console.log(e.target)
+		dropDown.style.background = 'black'
 		if(!dropDown.contains(e.target)){
+
 			closeDropDown()
 		}
 
