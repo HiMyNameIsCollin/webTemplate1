@@ -162,7 +162,7 @@ a
 		@include border
 		@include button
 
-.midSection
+.showCaseSection
 	display: flex
 	flex-direction: column
 	padding: 6rem 2rem
@@ -212,10 +212,14 @@ a
 		text-align: start
 	&__formInput
 		@include border
+		border: solid 2px inherit
 		border-radius: 5px
 		box-shadow: 0px 0px 25px rgba(255, 255 , 255, 0.25), 0px 0px 5px black
 		padding: .5rem 1rem
 		width: 100%
+		&:focus
+			border: solid 2px #b5838d
+			outline: none
 	&__formBtn
 		@include border
 		@include button
@@ -254,8 +258,9 @@ a
 			margin: 0 auto
 			padding: 4rem 1rem 4rem 1rem
 
-	.midSection
+	.showCaseSection
 		flex-direction: row
+		flex-wrap: wrap
 		&__article
 			width: 50%
 
@@ -271,6 +276,8 @@ a
 				width: 100%
 		&__formLabel
 		&__formInput
+
+
 
 			
 
