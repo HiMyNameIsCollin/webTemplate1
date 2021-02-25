@@ -147,10 +147,10 @@ i {
 }
 .banner__button h2 {
   letter-spacing: 2px;
-  padding: 0.5rem 0;
+  padding: 0 0 0.5rem 0;
 }
 .banner__button span {
-  font-size: 5rem;
+  font-size: 2.5rem;
 }
 .banner__beginBtn {
   border: solid rgba(255, 255, 255, 0.25) 0.2rem;
@@ -295,7 +295,7 @@ i {
   .banner {
     background-image: url("../assets/workSpace2400x1600.jpg");
     background-size: cover;
-    background-position: 0 -50;
+    background-position: 0 0;
     background-attachment: fixed;
     padding: 1rem 0 3rem 0;
   }
@@ -340,6 +340,7 @@ i {
   }
 
   .banner {
+    background-position: 0 -50;
     padding: 4rem 0 3rem 0;
   }
   .banner__button {
