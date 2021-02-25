@@ -9,14 +9,16 @@ document.getElementById('nav__dropBtn').addEventListener('click', (e) => {
 	const closeDropDown = (e) => {
 		gsap.fromTo('#dropDown', {x: '0%'}, {x: '100%', duration: 0.25})
 		setTimeout(() => dropDown.classList.remove('dropDown--active'), 500);
-		return () => window.removeEventListener('click', closeDropDown)
+		window.removeEventListener('click', closeDropDown)
+		window.removeEventListener('click', clickedOutside)
 	}
 
 	const clickedOutside = (e) => {
+		console.log(e.target)
 		if(!dropDown.contains(e.target)){
 			closeDropDown()
 		}
-		return () => window.removeEventListener('click', clickedOutside)
+
 	}
 	document.getElementById('dropDown__closeBtn').addEventListener('click', closeDropDown)	
 	window.addEventListener('click', clickedOutside)
