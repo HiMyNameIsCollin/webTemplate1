@@ -86,7 +86,7 @@ a {
 .dropDown__closeBtn {
   position: absolute;
   top: 1.5rem;
-  right: 1rem;
+  right: 1.13rem;
 }
 .dropDown__item {
   border-bottom: solid rgba(255, 255, 255, 0.25) 0.2rem;
