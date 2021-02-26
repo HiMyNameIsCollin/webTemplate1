@@ -130,18 +130,18 @@ a {
 }
 .banner__buttonContainer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   justify-content: space-around;
   width: 100%;
 }
 .banner__button {
-  border-bottom: solid rgba(255, 255, 255, 0.25) 0.2rem;
   color: white;
   cursor: pointer;
   text-align: center;
   margin-bottom: 1rem;
-  padding: 0 6rem;
-  width: 100%;
+  padding: 0 2rem;
+  width: auto;
 }
 .banner__button h2 {
   letter-spacing: 2px;
@@ -173,12 +173,39 @@ a {
   }
 }
 
-.showCaseSection {
-  display: flex;
-  flex-direction: column;
+.showCase {
   padding: 6rem 2rem;
 }
-.showCaseSection__article {
+.showCase__inner {
+  border-top: solid rgba(255, 255, 255, 0.25) 0.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.showCase__header {
+  font-size: 1.5rem;
+  padding: 2rem 1rem 1rem 1rem;
+  text-align: center;
+}
+.showCase__header p {
+  font-size: 1rem;
+}
+.showCase__img {
+  border-radius: 50%;
+}
+.showCase__img img {
+  border-radius: 50%;
+  max-width: 100%;
+}
+.showCase__img--floatLeft {
+  display: inline-block;
+  float: left;
+}
+.showCase__img--floatRight {
+  float: right;
+}
+
+.article {
   align-items: center;
   color: #555;
   display: flex;
@@ -187,22 +214,19 @@ a {
   padding-top: 1rem;
   text-align: center;
 }
-.showCaseSection__articleHeader {
+.article__header {
   margin: 0.5rem 0;
 }
-.showCaseSection__articleImg {
-  background: black;
+.article__img {
   border-radius: 50%;
-  display: flex;
   height: 150px;
   width: 150px;
 }
-.showCaseSection__articleImg img {
+.article__img img {
   border-radius: 50%;
-  margin: auto;
   max-width: 100%;
 }
-.showCaseSection__articleBtn {
+.article__btn {
   border: solid rgba(255, 255, 255, 0.25) 0.2rem;
   background: none;
   border-radius: 10px;
@@ -215,11 +239,11 @@ a {
   transition: 0.25 all forwards;
 }
 @media only screen and (min-width: 920px) {
-  .showCaseSection__articleBtn {
+  .article__btn {
     transition: 0.25s all linear;
     margin: 2rem auto;
   }
-  .showCaseSection__articleBtn:hover {
+  .article__btn:hover {
     background: #555;
     color: white;
   }
@@ -233,21 +257,21 @@ a {
 .footer__header {
   margin-bottom: 2rem;
 }
-.footer__form {
+.form {
   display: flex;
   flex-wrap: wrap;
 }
-.footer__formGroup {
+.form__group {
   margin-bottom: 1rem;
   width: 100%;
 }
-.footer__formLabel {
+.form__label {
   display: block;
   padding: 1rem 0;
   font-weight: 700;
   text-align: start;
 }
-.footer__formInput {
+.form__input {
   border: solid rgba(255, 255, 255, 0.25) 0.2rem;
   border: solid 2px inherit;
   border-radius: 5px;
@@ -255,11 +279,11 @@ a {
   padding: 0.5rem 1rem;
   width: 100%;
 }
-.footer__formInput:focus {
+.form__input:focus {
   border: solid 2px #b5838d;
   outline: none;
 }
-.footer__formBtn {
+.form__btn {
   border: solid rgba(255, 255, 255, 0.25) 0.2rem;
   background: none;
   border-radius: 10px;
@@ -272,15 +296,16 @@ a {
   transition: 0.25 all forwards;
 }
 @media only screen and (min-width: 920px) {
-  .footer__formBtn {
+  .form__btn {
     transition: 0.25s all linear;
     margin: 2rem auto;
   }
-  .footer__formBtn:hover {
+  .form__btn:hover {
     background: #555;
     color: white;
   }
 }
+
 @media only screen and (min-width: 576px) {
   .nav {
     padding: 0 3rem;
@@ -309,39 +334,34 @@ a {
     background-attachment: fixed;
     padding: 1rem 0 3rem 0;
   }
-  .banner__buttonContainer {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-  .banner__button {
-    width: auto;
-  }
   .banner__header {
     color: white;
     max-width: 50%;
     margin: 0 auto;
-    padding: 4rem 1rem 4rem 1rem;
+    padding: 4rem 1rem;
   }
 
-  .showCaseSection {
+  .showCase__inner {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .showCaseSection__article {
+  .showCase__header {
+    padding: 4rem 1rem;
+  }
+
+  .article {
     width: 50%;
   }
 
-  .footer {
-    padding: 4rem;
-  }
   .footer__header {
     font-size: 2rem;
   }
-  .footer__formGroup {
+
+  .form__group {
     padding: 0 2rem;
     width: 50%;
   }
-  .footer__formGroup:nth-of-type(3) {
+  .form__group:nth-of-type(3) {
     width: 100%;
   }
 }
@@ -361,6 +381,10 @@ a {
   }
   .banner__button:nth-of-type(3) {
     border-right: none;
+  }
+
+  .footer {
+    padding: 4rem;
   }
 }
 

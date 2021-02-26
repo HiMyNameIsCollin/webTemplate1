@@ -142,17 +142,17 @@ a
 		padding: 2rem 1rem 1rem 1rem
 	&__buttonContainer
 		display: flex
-		flex-direction: column
+		flex-direction: row
+		flex-wrap: wrap
 		justify-content: space-around
 		width: 100%
 	&__button
-		@include borderBottom
 		color: white
 		cursor: pointer
 		text-align: center
 		margin-bottom: 1rem
-		padding: 0 6rem
-		width: 100%
+		padding: 0 2rem
+		width: auto
 		h2
 			letter-spacing: 2px
 			padding: 0 0 .5rem 0
@@ -162,33 +162,50 @@ a
 		@include border
 		@include button
 
-.showCaseSection
-	display: flex
-	flex-direction: column
+.showCase
 	padding: 6rem 2rem
-	&__article
-		align-items: center
-		color: #555
+	&__inner
+		@include borderTop
 		display: flex
 		flex-direction: column
 		justify-content: center
-		padding-top: 1rem
+	&__header
+		font-size: 1.5rem
+		padding: 2rem 1rem 1rem 1rem
 		text-align: center
-	&__articleHeader
-		margin: .5rem 0
-	&__articleBlurb
-
-	&__articleImg
-		background: black
+		p
+			font-size: 1rem
+	&__img
 		border-radius: 50%
-		display: flex
+		img
+			border-radius: 50%
+			max-width: 100%
+		&--floatLeft
+			display: inline-block
+			float: left
+		&--floatRight
+			float: right
+
+.article
+	align-items: center
+	color: #555
+	display: flex
+	flex-direction: column
+	justify-content: center
+	padding-top: 1rem
+	text-align: center
+	&__header
+		margin: .5rem 0
+	&__blurb
+
+	&__img
+		border-radius: 50%
 		height: 150px
 		width: 150px
 		img
 			border-radius: 50%
-			margin: auto
 			max-width: 100%
-	&__articleBtn
+	&__btn
 		@include border
 		@include button
 
@@ -199,18 +216,20 @@ a
 	padding: 2rem 1rem
 	&__header
 		margin-bottom: 2rem
-	&__form
-		display: flex
-		flex-wrap: wrap
-	&__formGroup
+	&__footer__copyright
+
+.form
+	display: flex
+	flex-wrap: wrap
+	&__group
 		margin-bottom: 1rem
 		width: 100%
-	&__formLabel
+	&__label
 		display: block
 		padding: 1rem 0
 		font-weight: 700
 		text-align: start
-	&__formInput
+	&__input
 		@include border
 		border: solid 2px inherit
 		border-radius: 5px
@@ -220,12 +239,9 @@ a
 		&:focus
 			border: solid 2px #b5838d
 			outline: none
-	&__formBtn
+	&__btn
 		@include border
 		@include button
-	&__footer__copyright
-
-
 
 @media only screen and (min-width: 576px)
 	.nav
@@ -248,34 +264,35 @@ a
 		background-attachment: fixed
 		padding: 1rem 0 3rem 0
 		&__buttonContainer
-			flex-direction: row
-			flex-wrap: wrap
 		&__button
-			width: auto
 		&__header
 			color: white
 			max-width: 50%
 			margin: 0 auto
-			padding: 4rem 1rem 4rem 1rem
+			padding: 4rem 1rem
 
-	.showCaseSection
-		flex-direction: row
-		flex-wrap: wrap
-		&__article
-			width: 50%
+	.showCase
+		&__inner
+			flex-direction: row
+			flex-wrap: wrap
+		&__header
+			padding: 4rem 1rem
+
+	.article
+		width: 50%
 
 	.footer
-		padding: 4rem
 		&__header
 			font-size: 2rem
-		&__form
-		&__formGroup
+
+	.form
+		&__group
 			padding: 0 2rem
 			width: 50%
 			&:nth-of-type(3)
 				width: 100%
-		&__formLabel
-		&__formInput
+		&__label
+		&__input
 
 
 
@@ -295,3 +312,6 @@ a
 			width: 33%
 			&:nth-of-type(3)
 				border-right: none
+
+	.footer
+		padding: 4rem
