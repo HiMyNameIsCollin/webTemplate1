@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="https://kit.fontawesome.com/1f3e95df30.js" crossorigin="anonymous"></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js'></script>
+	<link rel="stylesheet" href="stylesheets/index.css">
+	<title>Template</title>
+</head>
+<body>
+	<nav class='nav nav--alt'>
+		<a class='nav__logo nav__logo--alt' href="http://bit.ly/2NG98ME" target='_blank'>
+			Built by <span> Collin </span> <span> Stone</span>
+		</a>
+		<ul class='nav__list'>
+			<li class='nav__item'>
+				<a href="index.html">Home</a>
+			</li>
+			<li class='nav__item'>
+				<a href="pageTwo.html">Page 2</a>
+			</li>
+			<li class='nav__item'>
+				<a href="pageThree.html">Page 3</a>
+			</li>
+		</ul>
+		<span id='nav__dropBtn' class='nav__dropBtn'>
+			<i class="fas fa-bars"></i>
+		</span>
+		<div id='dropDown' class='dropDown'>
+			<i id='dropDown__closeBtn' class="dropDown__closeBtn fas fa-times"></i>
+			<ul class='dropDown__list'>
+				<li class='dropDown__item'>
+					<a href="index.html">Home</a>
+				</li>
+				<li class='dropDown__item'>
+					<a href="pageTwo.html">Page 2</a>
+				</li>
+				<li class='dropDown__item'>
+					<a href="pageThree.html">Page 3</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<footer class='footer'>
+		<h3 class='footer__header'> Lets get in touch </h3>
+		<form class='form'>
+			<div class='form__group'>
+				<label class='form__label' for="name">Name</label>
+				<input class='form__input' type="text" name="name"/>
+			</div>
+			<div class='form__group'>
+				<label class='form__label' for="email">Email</label>
+				<input class='form__input' type="text" name="email"/>
+			</div>
+			<div class='form__group'>
+				<label class='form__label' for="message">Message</label>
+				<textarea class='form__input' rows='6' name="message"></textarea>
+			</div>
+			<a class='form__btn'>Submit</a>
+		</form>
+		<p class='footer__copyright'> Website by: Collin Stone || Images from Unsplash </p>
+	</footer>
+
+	<script src='./script.js'></script>

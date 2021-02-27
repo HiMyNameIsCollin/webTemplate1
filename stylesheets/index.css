@@ -178,9 +178,6 @@ a {
 }
 .showCase__inner {
   border-top: solid rgba(255, 255, 255, 0.25) 0.2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 .showCase__header {
   font-size: 1.5rem;
@@ -192,17 +189,23 @@ a {
 }
 .showCase__img {
   border-radius: 50%;
+  display: inline-block;
+  position: relative;
 }
 .showCase__img img {
   border-radius: 50%;
   max-width: 100%;
 }
 .showCase__img--floatLeft {
-  display: inline-block;
   float: left;
+  padding: 0 1.5rem 1rem 0;
 }
 .showCase__img--floatRight {
   float: right;
+  padding: 0 0 1rem 1.5rem;
+}
+.showCase__blurb {
+  margin-bottom: 1.5rem;
 }
 
 .article {
@@ -341,10 +344,6 @@ a {
     padding: 4rem 1rem;
   }
 
-  .showCase__inner {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
   .showCase__header {
     padding: 4rem 1rem;
   }

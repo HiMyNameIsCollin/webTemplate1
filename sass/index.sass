@@ -166,9 +166,7 @@ a
 	padding: 6rem 2rem
 	&__inner
 		@include borderTop
-		display: flex
-		flex-direction: column
-		justify-content: center
+
 	&__header
 		font-size: 1.5rem
 		padding: 2rem 1rem 1rem 1rem
@@ -177,14 +175,20 @@ a
 			font-size: 1rem
 	&__img
 		border-radius: 50%
+		display: inline-block
+		position: relative
 		img
 			border-radius: 50%
 			max-width: 100%
 		&--floatLeft
-			display: inline-block
 			float: left
+			padding: 0 1.5rem 1rem 0
 		&--floatRight
 			float: right
+			padding: 0 0 1rem 1.5rem
+	&__blurb
+		margin-bottom: 1.5rem
+
 
 .article
 	align-items: center
@@ -273,8 +277,6 @@ a
 
 	.showCase
 		&__inner
-			flex-direction: row
-			flex-wrap: wrap
 		&__header
 			padding: 4rem 1rem
 
